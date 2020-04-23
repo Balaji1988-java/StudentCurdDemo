@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Show user Details</title>
+
+  <link rel="stylesheet" href="../../static/mystyle.css" th:href="@{/mystyle.css}" />
+<!--  <style>
+body {
+  background-color: Green;
+}
+
+</style>-->
+ 
+</head>
+<body>
+<h9>
+<p th:text="'Name is :' + ${user.name}">Hello XYZ</p>
+<p th:text="'password is :' + ${user.pass}">Hello XYZ</p>
+<p th:text="'Email ID is :' + ${user.email}">Hello XYZ</p>
+<p th:text="'salary is :' + ${user.salary}">Hello XYZ</p>
+<p th:text="'dateOfBirth ID is :' + ${user.dateOfBirth}">Hello XYZ</p>
+<h1>---------------------------------------------------------------</h1>
+<table border="1" style="width:300px">
+    <tr>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>DateOfBirth</th>
+    </tr>
+    <tr th:each="users : ${user}">
+        <td th:text="${user.name}">Developer</td>
+        <td th:text="${user.pass}">Devops</td>
+        <td th:text="${user.email}">Email data</td>
+        <td th:text="${user.salary}">Total Pay</td>
+        <td th:text="${user.dateOfBirth}">ddmmyyyy</td>
+    </tr>
+    
+    <!-- <tr th:each="users : ${user1}">
+        <td th:text="${user1.name}">Developer</td>
+        <td th:text="${user1.pass}">Devops</td>
+        <td th:text="${user1.email}">Email data</td>
+        <td th:text="${user1.salary}">Total Pay</td>
+        <td th:text="${user1.dateOfBirth}">ddmmyyyy</td>
+    </tr> -->
+    
+</table>
+<h1>---------------------------------------------------------------</h1>
+
+
+<!-- 
+<p th:text="'Name is :' + ${user1.name}">Hello XYZ</p>
+<p th:text="'password is :' + ${user1.pass}">Hello XYZ</p>
+<p th:text="'Email ID is :' + ${user1.email}">Hello XYZ</p>
+<p th:text="'salary is :' + ${user1.salary}">Hello XYZ</p>
+<p th:text="'dateOfBirth ID is :' + ${user1.dateOfBirth}">Hello XYZ</p>
+<h1>---------------------------------------------------------------</h1>
+<p th:text="'Name is :' + ${user2.name}">Hello XYZ</p>
+<p th:text="'password is :' + ${user2.pass}">Hello XYZ</p>
+<p th:text="'Email ID is :' + ${user2.email}">Hello XYZ</p>
+<p th:text="'salary is :' + ${user2.salary}">Hello XYZ</p>
+<p th:text="'dateOfBirth ID is :' + ${user2.dateOfBirth}">Hello XYZ</p>
+<h1>---------------------------------------------------------------</h1>
+<p th:text="'Name is :' + ${user3.name}">Hello XYZ</p>
+<p th:text="'password is :' + ${user3.pass}">Hello XYZ</p>
+<p th:text="'Email ID is :' + ${user3.email}">Hello XYZ</p>
+<p th:text="'salary is :' + ${user3.salary}">Hello XYZ</p>
+<p th:text="'dateOfBirth ID is :' + ${user3.dateOfBirth}">Hello XYZ</p>
+<h1>---------------------------------------------------------------</h1>
+<p th:text="'Name is :' + ${user4.name}">Hello XYZ</p>
+<p th:text="'password is :' + ${user4.pass}">Hello XYZ</p>
+<p th:text="'Email ID is :' + ${user4.email}">Hello XYZ</p>
+<p th:text="'salary is :' + ${user4.salary}">Hello XYZ</p>
+<p th:text="'dateOfBirth ID is :' + ${user4.dateOfBirth}">Hello XYZ</p>
+<h1>---------------------------------------------------------------</h1>
+-->
+
+<span th:text="'Hello , ' + ${username}">Hello Developer </span></br>
+<span th:text="'Authorization , ' + ${copyright}"> Permission Granted</span>
+
+</h9>
+</body>
+</html>

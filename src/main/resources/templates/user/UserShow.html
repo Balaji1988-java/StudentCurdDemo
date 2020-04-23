@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Show user Details</title>
+
+  <link rel="stylesheet" href="../../static/mystyle.css" th:href="@{/mystyle.css}" />
+<!--  <style>
+body {
+  background-color: Green;
+}
+
+</style>-->
+ 
+</head>
+<body>
+<h9>
+<h1>---------------------------------------------------------------</h1>
+<table border="1" style="width:300px">
+    <tr>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>DateOfBirth</th>
+    </tr>
+    <tr th:each="entry : ${entries}">
+        <td th:text="${entries.name}">Developer</td>
+        <td th:text="${entries.pass}">Devops</td>
+        <td th:text="${entries.email}">Email data</td>
+        <td th:text="${entries.salary}">Total Pay</td>
+        <td th:text="${entries.dateOfBirth}">ddmmyyyy</td>
+    </tr>
+   
+</table>
+<h1>---------------------------------------------------------------</h1>
+
+
+</h9>
+</body>
+</html>
